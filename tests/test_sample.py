@@ -7,7 +7,13 @@ testdata = [
 
 
 class TestClass:
+    @pytest.mark.slow
     def test_one(self):
+        x = 'this'
+        assert 't' in x
+
+    @pytest.mark.fast
+    def test_two(self):
         x = 'this'
         assert 't' in x
 
